@@ -1,3 +1,4 @@
+/* eslint-disable react/prop-types */
 import { useState, useEffect } from "react";
 import Heroimage1 from "../../assets/image/Carousel/14dc8ced-bf2c-4bc1-a21e-386293def4bd.jpg";
 import Heroimage2 from "../../assets/image/Carousel/Ecuador Creates New Marine Reserve North of Galápagos Islands.jpg";
@@ -42,8 +43,8 @@ const Carousel = ({ className }) => {
         {slides.map((slide, index) => (
           <div
             key={index}
-            className="min-w-full flex-shrink-0 
-              h-[200px] m:h-[300px] sm:h-[350px] md:h-[400px] lg:h-[450px] lg:w-[200px] xl:h-[500px]">
+            className="min-w-full flex-shrink-0
+              h-[200px] sm:h-[300px] md:h-[350px] lg:h-[400px] xl:h-[450px]">
             <img
               src={slide.src}
               alt={slide.alt}
@@ -57,13 +58,39 @@ const Carousel = ({ className }) => {
       <div className="absolute inset-0 flex items-center justify-between px-4">
         <button
           onClick={prevSlide}
-          className="p-2 ">
-         
+          className="p-2  focus:outline-none">
+          {/* Left Arrow Icon */}
+          {/* <svg
+            xmlns="http://www.w3.org/2000/svg"
+            className="w-6 h-6"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke="currentColor">
+            <path
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              strokeWidth={2}
+              d="M15 19l-7-7 7-7"
+            />
+          </svg> */}
         </button>
         <button
           onClick={nextSlide}
-          className="p-2 ">
-         
+          className="p-2 focus:outline-none">
+          {/* Right Arrow Icon */}
+          {/* <svg
+            xmlns="http://www.w3.org/2000/svg"
+            className="w-6 h-6"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke="currentColor">
+            <path
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              strokeWidth={2}
+              d="M9 5l7 7-7 7"
+            />
+          </svg> */}
         </button>
       </div>
 

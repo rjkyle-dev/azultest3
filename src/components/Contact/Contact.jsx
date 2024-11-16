@@ -1,12 +1,13 @@
+/* eslint-disable react/no-unescaped-entities */
+/* eslint-disable no-unused-vars */
 import React from "react";
-import email from "../../assets/icon/email.png";
-import phone from "../../assets/icon/telephone.png";
-import fb from "../../assets/icon/facebook.png";
-import location from "../../assets/icon/travel.png";
+import Footer from "../../components/Footer/Footer";
+
 
 const Contact = () => {
   return (
-    <section className="container mx-auto h-auto mt-20 m:mt-28 px-4">
+    <>
+    <section className="container mx-auto h-auto mt-20 px-4">
       {/* Header Section */}
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
         <div className="flex flex-col gap-4 mt-8 lg:mt-24">
@@ -26,7 +27,6 @@ const Contact = () => {
           </div>
         </div>
 
-     
         <div className="flex justify-center lg:justify-end">
           <div className="flex flex-col justify-center items-center gap-5 mt-10 lg:mt-10 bg-indigo-300 py-10 w-full sm:w-[400px] rounded-2xl">
             <div className="w-[90%]">
@@ -59,43 +59,13 @@ const Contact = () => {
           </div>
         </div>
       </div>
-
-    
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 mt-16">
-        <div className="flex items-center">
-          <img src={email} className="w-6 lg:w-8" alt="Email Icon" />
-          <a
-            href="#"
-            className="ml-4 underline font-medium text-sm lg:text-base">
-            azulcorp@gmail.com
-          </a>
-        </div>
-        <div className="flex items-center">
-          <img src={location} className="w-6 lg:w-8" alt="Location Icon" />
-          <a
-            href="#"
-            className="ml-4 underline font-medium text-sm lg:text-base">
-            Panabo City, Davao del Norte, Philippines
-          </a>
-        </div>
-        <div className="flex items-center">
-          <img src={phone} className="w-6 lg:w-8" alt="Phone Icon" />
-          <a
-            href="#"
-            className="ml-4 underline font-medium text-sm lg:text-base">
-            +63-902-690-6967
-          </a>
-        </div>
-        <div className="flex items-center">
-          <img src={fb} className="w-6 lg:w-8" alt="Facebook Icon" />
-          <a
-            href="#"
-            className="ml-4 underline font-medium text-sm lg:text-base">
-            AZUL Corps.
-          </a>
-        </div>
-      </div>
+      {/* Footer Section */}
+     
     </section>
+    <section className="container mx-auto h-auto mt-[250px] mb-10 px-4 ml-[10em]">
+        <Footer />
+      </section>
+      </>
   );
 };
 
